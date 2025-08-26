@@ -1,7 +1,7 @@
 // src/Pages/Food.jsx
 import React from "react";
 import { food_items } from "../fooditems.jsx";
-import "./food.css";
+import "./Food.css";
 
 const Food = ({ selectedCategory, searchQuery, onAddToCart }) => {
   const filteredItems = food_items.filter((item) => {
