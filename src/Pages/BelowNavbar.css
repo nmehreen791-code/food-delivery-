@@ -1,0 +1,90 @@
+/* Container for the category buttons */
+.below-navbar-container {
+  display: flex;
+  gap: 16px;
+  justify-content: center; 
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  overflow-x: auto;
+
+  background: #cfeed5; /* subtle background */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.below-navbar-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.below-navbar-container::-webkit-scrollbar {
+  display: none; /* hide scrollbar for Chrome/Safari */
+}
+
+/* Individual category button */
+.category-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  height: 70px;
+  padding: 8px;
+  border-radius: 16px;
+  border: none;
+  background: #f9fafb;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease-in-out;
+  text-align: center;
+}
+
+.category-button svg {
+  width: 32px;
+  height: 32px;
+  color: #22c55e;
+  transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.category-button .category-name {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  color: #374151;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Hover & Active State */
+.category-button:hover,
+.category-button.active {
+  background: #22c55e;
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.category-button:hover svg,
+.category-button.active svg {
+  color: #ffffff;
+  transform: scale(1.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .below-navbar-container {
+    padding: 0.5rem;
+    gap: 12px;
+  }
+  .category-button {
+    min-width: 60px;
+    height: 60px;
+  }
+  .category-button svg {
+    width: 28px;
+    height: 28px;
+  }
+  .category-button .category-name {
+    font-size: 0.65rem;
+  }
+}

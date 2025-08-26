@@ -1,0 +1,36 @@
+/* Main page container */
+.home-container {
+  background-color: #cfeed5; /* Tailwind slate-200 */
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.categories-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  flex-wrap: wrap;
+   justify-content: center; /* horizontally center */
+  align-items: center;     /* vertically align items (row ke andar) */
+  
+}
+
+.category-card {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.category-card:hover {
+  background: #e2e8f0;
+}
+
+.category-card.active {
+  background: #22c55e;
+  color: #fff;
+}
